@@ -27,7 +27,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: report
-          path: cypress/report/api    
+          path: cypress/reports/api    
 
       - name: Upload screenshots
         if: failure()

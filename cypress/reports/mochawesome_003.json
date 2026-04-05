@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-04-05T20:58:08.794Z",
+    "end": "2026-04-05T20:58:21.317Z",
+    "duration": 12523,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3d6f617a-3f16-46e3-aeae-b7bb914727b6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\web\\pesquisas.cy.js",
+      "file": "cypress\\e2e\\web\\pesquisas.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a90a92a0-6a9c-4dc2-81d0-9387627e3939",
+          "title": "Pesquisas",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Realizar pesquisa com sucesso",
+              "fullTitle": "Pesquisas Realizar pesquisa com sucesso",
+              "timedOut": null,
+              "duration": 9529,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "realizarPesquisa(\"Drex\");\ncy.url().should('include', 's=Drex');\ncy.get('.page-title.ast-archive-title span').invoke('text').should('match', /drex/i);\ncy.get('article').should('have.length.greaterThan', 0);",
+              "err": {},
+              "uuid": "19c0a56b-b8e2-40e0-bf4b-54f05f578470",
+              "parentUUID": "a90a92a0-6a9c-4dc2-81d0-9387627e3939",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Realizar pesquisa sem resultado",
+              "fullTitle": "Pesquisas Realizar pesquisa sem resultado",
+              "timedOut": null,
+              "duration": 1090,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "realizarPesquisa(\"cypress\");\ncy.url().should('include', 's=cypress');\ncy.get('.page-title.ast-archive-title span').invoke('text').should('match', /cypress/i);\ncy.get('.no-results').should('contain.text', 'Lamentamos, mas nada foi encontrado para sua pesquisa, tente novamente com outras palavras.');",
+              "err": {
+                "message": "ReferenceError: The following error originated from your application code, not from Cypress.\n\n  > astra is not defined\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "ReferenceError: The following error originated from your application code, not from Cypress.\n\n  > astra is not defined\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at u (https://blog.agibank.com.br/_static/??-eJytVEFu4zAM/FBVIYe06GHRt9AWY7ORRUGk4+2+vrSyKVrAEdzFXmyD4gw5I9JLdj0nxaReR5xQPIgWsKegin8TP1GiE2Hwp1ITw6NFHt/kYdkPFaX+/O6EAnZQNghynAdK4nvuIvdn8YFEV4pbwEGiCZR4N/JirXIRr5Ss8kIZy4+Lrtgr1JkUJYj05y5NVW8a1Zyg1PtInefUMZRAabjZUmsoTjmCossFL4SLn+CuJZKxX4lz4S/WRubsupliuNvPHHW1DB2EwEnciYsbZkvpsAxfqG4FqmaX2RSYzdZy4572chub/gcaSxpQIkPArfFrWyXRhq+But5b7aA19ivrXpaqxl4XSD0GNzKfZYv7e4b7uyYjms5iZrBia1k2Sn5jaGziNeFn3AkubsI0b9FOOEA9dI2/xB6rBKH0Y9Ora8q/X2ieC53eG3gLLSOoQLYz+/B1zz4HoQ5kCvjb4K/Tr8Pz8/Hwcjwenj4ABFMFjQ==:1:13899)\n    at <unknown> (https://blog.agibank.com.br/_static/??-eJytVEFu4zAM/FBVIYe06GHRt9AWY7ORRUGk4+2+vrSyKVrAEdzFXmyD4gw5I9JLdj0nxaReR5xQPIgWsKegin8TP1GiE2Hwp1ITw6NFHt/kYdkPFaX+/O6EAnZQNghynAdK4nvuIvdn8YFEV4pbwEGiCZR4N/JirXIRr5Ss8kIZy4+Lrtgr1JkUJYj05y5NVW8a1Zyg1PtInefUMZRAabjZUmsoTjmCossFL4SLn+CuJZKxX4lz4S/WRubsupliuNvPHHW1DB2EwEnciYsbZkvpsAxfqG4FqmaX2RSYzdZy4572chub/gcaSxpQIkPArfFrWyXRhq+But5b7aA19ivrXpaqxl4XSD0GNzKfZYv7e4b7uyYjms5iZrBia1k2Sn5jaGziNeFn3AkubsI0b9FOOEA9dI2/xB6rBKH0Y9Ora8q/X2ieC53eG3gLLSOoQLYz+/B1zz4HoQ5kCvjb4K/Tr8Pz8/Hwcjwenj4ABFMFjQ==:1:14267)\n    at <unknown> (https://blog.agibank.com.br/_static/??-eJytVEFu4zAM/FBVIYe06GHRt9AWY7ORRUGk4+2+vrSyKVrAEdzFXmyD4gw5I9JLdj0nxaReR5xQPIgWsKegin8TP1GiE2Hwp1ITw6NFHt/kYdkPFaX+/O6EAnZQNghynAdK4nvuIvdn8YFEV4pbwEGiCZR4N/JirXIRr5Ss8kIZy4+Lrtgr1JkUJYj05y5NVW8a1Zyg1PtInefUMZRAabjZUmsoTjmCossFL4SLn+CuJZKxX4lz4S/WRubsupliuNvPHHW1DB2EwEnciYsbZkvpsAxfqG4FqmaX2RSYzdZy4572chub/gcaSxpQIkPArfFrWyXRhq+But5b7aA19ivrXpaqxl4XSD0GNzKfZYv7e4b7uyYjms5iZrBia1k2Sn5jaGziNeFn3AkubsI0b9FOOEA9dI2/xB6rBKH0Y9Ora8q/X2ieC53eG3gLLSOoQLYz+/B1zz4HoQ5kCvjb4K/Tr8Pz8/Hwcjwenj4ABFMFjQ==:1:24317)",
+                "diff": null
+              },
+              "uuid": "07b28045-5e18-4ccc-b1e1-4a64f39d30aa",
+              "parentUUID": "a90a92a0-6a9c-4dc2-81d0-9387627e3939",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "19c0a56b-b8e2-40e0-bf4b-54f05f578470"
+          ],
+          "failures": [
+            "07b28045-5e18-4ccc-b1e1-4a64f39d30aa"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10619,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
