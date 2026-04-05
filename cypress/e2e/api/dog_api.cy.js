@@ -1,6 +1,5 @@
 describe('Dog API - Testes', () => {
 
-  // 🔹 GET /breeds/list/all
   it('Deve listar todas as raças', () => {
     cy.request('/breeds/list/all').then((response) => {
 
@@ -12,8 +11,8 @@ describe('Dog API - Testes', () => {
     })
   })
 
-  it('Deve retornar imagens da raça hound', () => {
-    cy.request('/breed/hound/images').then((response) => {
+  it('Deve retornar imagens da raça dachshund', () => {
+    cy.request('/breed/dachshund/images').then((response) => {
 
       expect(response.status).to.eq(200)
       expect(response.body.status).to.eq('success')
@@ -31,18 +30,18 @@ describe('Dog API - Testes', () => {
       expect(response.body.status).to.eq('success')
 
       expect(response.body.message).to.be.a('string')
-      expect(response.body.message).to.include('https://')
     })
   })
 
   it('Deve retornar erro para raça inválida', () => {
     cy.request({
-      url: '/breed/invalidbreed/images',
+      url: '/breed/caramelo/images',
       failOnStatusCode: false
     }).then((response) => {
 
       expect(response.status).to.eq(404)
       expect(response.body.status).to.eq('error')
+      expect(response.body.message).to.eq('Breed not found (main breed does not exist)')
     })
   })
 

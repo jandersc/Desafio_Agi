@@ -19,8 +19,17 @@ Este projeto tem como objetivo validar a funcionalidade de busca do blog do Agib
 ```
 cypress/
   e2e/
-    pesquisas.cy.js
+    api/
+      dog_api.cy.js
+    web/
+      pesquisas.cy.js
   support/
+  reports/
+    api
+    web
+  screenshots/
+    api
+    web  
 cypress.config.js
 package.json
 ```
@@ -58,15 +67,21 @@ npm install
 
 ## ▶️ Como executar os testes
 
-### 🔹 Modo headless (CI)
+### 🔹 Testes Web
 
 ```bash
-npx cypress run
+npx cypress run --spec "cypress/e2e/web/*"
+```
+
+### 🔹 Testes API
+
+```bash
+npx cypress run --spec "cypress/e2e/api/*"
 ```
 
 ---
 
-## 🧪 Cenários implementados
+## 🧪 Cenários implementados Web
 
 ### ✅ Pesquisa com sucesso
 
@@ -83,6 +98,14 @@ npx cypress run
 * Valida:
 
   * Mensagem de "nenhum resultado encontrado"
+
+## 🧪 Cenários implementados API
+
+### ✅ Listar todas as raças
+### ✅ Retornar imagens da raça
+### ✅ Retornar uma imagem aleatória
+
+### ❌ Retornar erro para raça inválida
 
 ---
 
