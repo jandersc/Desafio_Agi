@@ -1,0 +1,23 @@
+{
+  "name": "cypress_agilizei",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jandersc/Cypress_Agilizei.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jandersc/Cypress_Agilizei/issues"
+  },
+  "homepage": "https://github.com/jandersc/Cypress_Agilizei#readme",
+  "devDependencies": {
+    "cypress": "^12.5.0"
+  }
+}
