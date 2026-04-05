@@ -20,6 +20,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           spec: cypress/e2e/web/**/*.cy.js
+          config: reporterOptions.reportDir=cypress/reports/web
 
       - name: Upload vídeos
         if: failure()

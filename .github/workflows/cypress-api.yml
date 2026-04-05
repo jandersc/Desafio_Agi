@@ -20,6 +20,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           spec: cypress/e2e/api/**/*.cy.js
+          config: reporterOptions.reportDir=cypress/reports/api
 
       - name: Upload Report
         uses: actions/upload-artifact@v4
