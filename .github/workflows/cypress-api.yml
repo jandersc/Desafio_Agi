@@ -1,0 +1,35 @@
+name: Cypress API Tests
+
+on:
+  push:
+    paths:
+      - 'cypress/e2e/api/**'
+  pull_request:
+    paths:
+      - 'cypress/e2e/api/**'
+
+jobs:
+  cypress-api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Cypress API
+        uses: cypress-io/github-action@v6
+        with:
+          spec: cypress/e2e/api/**/*.cy.js
+
+      - name: Upload Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: report
+          path: cypress/reports    
+
+      - name: Upload screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots-api
+          path: cypress/screenshots

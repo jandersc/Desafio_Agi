@@ -39,13 +39,13 @@ package.json
 Clone o repositório:
 
 ```bash
-git clone <url-do-repositorio>
+git clone <https://github.com/jandersc/Desafio_Agi.git>
 ```
 
 Acesse a pasta:
 
 ```bash
-cd nome-do-projeto
+cd Desafio_Agi
 ```
 
 Instale as dependências:
@@ -57,12 +57,6 @@ npm install
 ---
 
 ## ▶️ Como executar os testes
-
-### 🔹 Modo interativo
-
-```bash
-npx cypress open
-```
 
 ### 🔹 Modo headless (CI)
 

@@ -1,0 +1,36 @@
+name: Cypress Web Tests
+
+on:
+  push:
+    paths:
+      - 'cypress/e2e/web/**'
+  pull_request:
+    paths:
+      - 'cypress/e2e/web/**'
+
+jobs:
+  cypress-web:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Cypress Web
+        uses: cypress-io/github-action@v6
+        with:
+          spec: cypress/e2e/web/**/*.cy.js
+
+      - name: Upload vídeos
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: videos-web
+          path: cypress/videos
+
+      - name: Upload screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots-web
+          path: cypress/screenshots
