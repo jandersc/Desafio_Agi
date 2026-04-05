@@ -39,7 +39,7 @@ package.json
 Clone o repositório:
 
 ```bash
-git clone <url-do-repositori>
+git clone <url-do-repositorio>
 ```
 
 Acesse a pasta:
