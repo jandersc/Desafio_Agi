@@ -7,6 +7,7 @@ on:
   pull_request:
     paths:
       - 'cypress/e2e/web/**'
+  workflow_dispatch:
 
 jobs:
   cypress-web:
@@ -27,11 +28,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: videos-web
-          path: cypress/videos
+          path: cypress/videos/web
 
       - name: Upload screenshots
         if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: screenshots-web
-          path: cypress/screenshots
+          path: cypress/screenshots/web

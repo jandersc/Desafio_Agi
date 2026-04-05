@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-05T20:46:52.386Z",
+    "end": "2026-04-05T20:46:58.742Z",
+    "duration": 6356,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "165e2496-b694-4397-bf6e-70096b5d881d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\web\\pesquisas.cy.js",
+      "file": "cypress\\e2e\\web\\pesquisas.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f7eae60d-d8fd-4de1-9dae-b3dc85528df5",
+          "title": "Pesquisas",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Realizar pesquisa com sucesso",
+              "fullTitle": "Pesquisas Realizar pesquisa com sucesso",
+              "timedOut": null,
+              "duration": 1679,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "realizarPesquisa(\"Drex\");\n// valida URL\ncy.url().should('include', 's=Drex');\n// valida título da busca\ncy.get('.page-title.ast-archive-title span').invoke('text').should('match', /drex/i);\n// valida que tem resultados\ncy.get('article').should('have.length.greaterThan', 0);",
+              "err": {},
+              "uuid": "b30d3a0d-c522-472d-97e9-e9b38c053ac9",
+              "parentUUID": "f7eae60d-d8fd-4de1-9dae-b3dc85528df5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Realizar pesquisa sem resultado",
+              "fullTitle": "Pesquisas Realizar pesquisa sem resultado",
+              "timedOut": null,
+              "duration": 2846,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "realizarPesquisa(\"cypress\");\n// valida URL\ncy.url().should('include', 's=cypress');\n// valida título da busca\ncy.get('.page-title.ast-archive-title span').invoke('text').should('match', /cypress/i);\ncy.get('.no-results').should('contain.text', 'Lamentamos, mas nada foi encontrado para sua pesquisa, tente novamente com outras palavras.');",
+              "err": {},
+              "uuid": "db96aa89-b374-4bfc-a46c-852496e4d834",
+              "parentUUID": "f7eae60d-d8fd-4de1-9dae-b3dc85528df5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b30d3a0d-c522-472d-97e9-e9b38c053ac9",
+            "db96aa89-b374-4bfc-a46c-852496e4d834"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4525,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

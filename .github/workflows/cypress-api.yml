@@ -7,6 +7,7 @@ on:
   pull_request:
     paths:
       - 'cypress/e2e/api/**'
+  workflow_dispatch:
 
 jobs:
   cypress-api:
@@ -26,11 +27,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: report
-          path: cypress/reports    
+          path: cypress/report/api    
 
       - name: Upload screenshots
         if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: screenshots-api
-          path: cypress/screenshots
+          path: cypress/screenshots/api
