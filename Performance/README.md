@@ -107,7 +107,7 @@ k6 run blazedemo_test.js --out json=resultado.json
 ### 🔹 Teste de Carga
 
 * 250 requisições por segundo
-* Duração: 5 minutos
+* Duração: 1 minutos
 * Objetivo: validar estabilidade do sistema
 
 ---
@@ -164,13 +164,11 @@ O sistema **atendeu ao critério de aceitação**, apresentando:
 
 * Implementar correlação de dados (HTML parsing)
 * Integração com Grafana + InfluxDB
-* Execução automatizada via CI/CD (GitHub Actions)
-* Geração de relatórios visuais
 
 ---
 
 ## 👨‍💻 Autor
 
-Projeto desenvolvido como parte de avaliação técnica para QA Engineer.
+Projeto desenvolvido como parte de avaliação técnica para QA.
 
 ---
