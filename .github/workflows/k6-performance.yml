@@ -28,7 +28,7 @@ jobs:
 
       - name: ▶️ Executar teste k6
         run: |
-          k6 run performance/blazedemo_test.js --out json=resultado-performance.json
+          k6 run Performance/blazedemo_test.js --out json=resultado-performance.json
 
       - name: 📤 Salvar relatório
         uses: actions/upload-artifact@v4
